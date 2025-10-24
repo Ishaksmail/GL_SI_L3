@@ -1,4 +1,5 @@
 package GL;
+import UTILS.AuthorInfo;
 
 public class GL {
         public static final String RESET = "\u001B[0m";
@@ -11,6 +12,8 @@ public class GL {
         public static final String MAGENTA = "\u001B[35m";
 
         public static void main(String[] args) {
+
+                new AuthorInfo();
 
                 TP1.Exec tp1_exec = new TP1.Exec();
                 tp1_exec.run();

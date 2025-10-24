@@ -17,7 +17,7 @@ public class Exec implements EXEC {
 
         @Override
         public void run() {
-
+                
                 EX ex = new EX(5, "", () -> {
                         System.out.println();
                         System.out.println(CYAN + "\t\tAbstraction Example:" + RESET);
