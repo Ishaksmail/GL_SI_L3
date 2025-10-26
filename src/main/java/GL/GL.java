@@ -14,7 +14,6 @@ public class GL {
         public static void main(String[] args) {
 
                 new AuthorInfo();
-
                 TP1.Exec tp1_exec = new TP1.Exec();
                 tp1_exec.run();
 
