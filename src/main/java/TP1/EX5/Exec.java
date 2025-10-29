@@ -7,6 +7,8 @@ import static GL.GL.MAGENTA;
 import static GL.GL.RESET;
 import static GL.GL.YELLOW;
 
+import java.util.ArrayList;
+
 import TP1.EX5.base.Animal;
 import TP1.EX5.base.Bird;
 import TP1.EX5.base.Mammal;
@@ -19,7 +21,7 @@ public class Exec implements EXEC {
         @Override
         public void run() {
 
-                EX ex = new EX(5, "Object-Oriented Programming – Exercise 5", () -> {
+                EX ex = new EX(5, "Object-Oriented Programming", () -> {
                         System.out.println();
                         System.out.println(CYAN
                                         + "\t\tAbstraction, Encapsulation, Inheritance, and Polymorphism"
@@ -81,6 +83,8 @@ public class Exec implements EXEC {
                         System.out.println(
                                         "\t\tWe’ll observe how abstraction and polymorphism work together in action.");
                         System.out.println();
+                        System.out.println(
+                                        "\tCreating objects from different animal classes and invoking their methods to verify functionality.\n");
 
                         // Bird
                         Animal animalBird = new Bird();
@@ -96,11 +100,33 @@ public class Exec implements EXEC {
                         animalMammal.Sleep();
                         ((Mammal) animalMammal).Walk();
 
+                        System.out.println(
+                                        "\n\tUsing an Animal-type list to store various animal objects, then invoking the eat() and sleep() methods\n"
+                                                        +
+                                                        "\tthrough a loop to demonstrate polymorphism.\n");
+
                         // Reptile
                         Animal animalReptile = new Reptile();
                         System.out.println(BLUE + "\t\t> Reptile:" + RESET);
                         animalReptile.Eat();
                         animalReptile.Sleep();
+
+                        ArrayList<Animal> animals = new ArrayList<Animal>();
+                        // Adding animal objects to the Animal list
+                        animals.add(animalMammal);
+                        animals.add(animalBird);
+                        animals.add(animalReptile);
+                        animals.add(animalReptile);
+                        animals.add(animalMammal);
+
+                        int indexAnimal = 1;
+                        for (Animal animal : animals) {
+                                System.out.println(BLUE + "\t\t> Animal " + indexAnimal + " ("
+                                                + animal.getClass().getSimpleName() + "):" + RESET);
+                                animal.Eat();
+                                animal.Sleep();
+                                indexAnimal++;
+                        }
 
                         System.out.println();
                         System.out.println(GREEN + "\t[7] Result Summary:" + RESET);

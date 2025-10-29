@@ -11,6 +11,7 @@ public class GL {
         public static final String BOLD = "\u001B[1m";
         public static final String MAGENTA = "\u001B[35m";
 
+        
         public static void main(String[] args) {
 
                 new AuthorInfo();
