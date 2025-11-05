@@ -6,6 +6,7 @@ import static GL.GL.GREEN;
 import static GL.GL.MAGENTA;
 import static GL.GL.RESET;
 import static GL.GL.YELLOW;
+import static GL.GL.BOLD;
 
 import java.util.ArrayList;
 
@@ -83,8 +84,8 @@ public class Exec implements EXEC {
                         System.out.println(
                                         "\t\tWe’ll observe how abstraction and polymorphism work together in action.");
                         System.out.println();
-                        System.out.println(
-                                        "\tCreating objects from different animal classes and invoking their methods to verify functionality.\n");
+                        System.out.println(BOLD+
+                                        "\t\tCreating objects from different animal classes and invoking their methods to verify functionality.\n"+RESET);
 
                         // Bird
                         Animal animalBird = new Bird();
@@ -100,10 +101,10 @@ public class Exec implements EXEC {
                         animalMammal.Sleep();
                         ((Mammal) animalMammal).Walk();
 
-                        System.out.println(
-                                        "\n\tUsing an Animal-type list to store various animal objects, then invoking the eat() and sleep() methods\n"
-                                                        +
-                                                        "\tthrough a loop to demonstrate polymorphism.\n");
+                        System.out.println(BOLD +
+                                        "\n\t\tUsing an Animal-type list to store various animal objects, then invoking the eat() and sleep() methods\n"
+                                        +
+                                        "\t\tthrough a loop to demonstrate polymorphism.\n" + RESET);
 
                         // Reptile
                         Animal animalReptile = new Reptile();
