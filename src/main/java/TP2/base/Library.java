@@ -1,7 +1,7 @@
 package TP2.base;
 
 import java.util.ArrayList;
-import static GL.GL.*; // ✅ لإتاحة الألوان
+import static GL.GL.*;
 
 public class Library {
 
