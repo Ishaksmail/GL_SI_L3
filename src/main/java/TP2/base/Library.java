@@ -60,4 +60,12 @@ public class Library {
         }
         System.out.println(RED + "\n\tBook with ISBN " + YELLOW + ISBN + RESET + " not found!" + RESET);
     }
+
+    public ArrayList<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(ArrayList<Book> books) {
+        this.books = books;
+    }
 }
